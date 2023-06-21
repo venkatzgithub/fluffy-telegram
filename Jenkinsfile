@@ -32,7 +32,7 @@ pipeline {
      }
     stage('PR') {
       steps {
-        sh 'cat Dockerfile'
+        // sh 'cat Dockerfile'
        echo "ghprbTargetBranch: ${env.ghprbTargetBranch}"
       }
     }
