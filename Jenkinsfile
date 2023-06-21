@@ -5,7 +5,7 @@ pipeline {
         disableConcurrentBuilds()
   }
   stages {
-     stage('Clone the repo') {
+     stage('Clone the repo') { 
        steps {
          script {
             //Extract the Pull Request branch name from the environment variables
