@@ -12,7 +12,7 @@ pipeline {
            def pullRequestBranch = "main"
 
             //Clone the repository and checkout the Pull Request branch
-           checkout([
+           checkout([ 
              $class: 'GitSCM',
              branches: [
                [name: "*/main"]
