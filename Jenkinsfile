@@ -35,6 +35,7 @@ pipeline {
         // sh 'cat Dockerfile'
       sh 'cat README.md'
         sh 'cat Jenkinsfile'
+        sh 'git branch'
       echo "print target branch: ${env.CHANGE_SOURCE}"
       }
     }
