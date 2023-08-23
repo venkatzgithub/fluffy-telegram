@@ -34,7 +34,8 @@ pipeline {
       steps {
         // sh 'cat Dockerfile'
       sh 'cat README.md'
-       echo "print target branch: ${env.CHANGE_SOURCE}"
+        sh 'cat Jenkinsfile'
+      echo "print target branch: ${env.CHANGE_SOURCE}"
       }
     }
   }
