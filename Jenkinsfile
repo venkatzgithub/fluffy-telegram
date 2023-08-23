@@ -15,7 +15,7 @@ pipeline {
            checkout([
              $class: 'GitSCM',
              branches: [
-               [name: "*/PR-${env.CHANGE_ID}"]
+               [name: "*/main"]
              ],
              extensions: [
                [$class: 'CloneOption', depth: 1]
@@ -35,6 +35,7 @@ pipeline {
         // sh 'cat Dockerfile'
       sh 'cat README.md'
         sh 'cat Jenkinsfile'
+        sh 'git branch'
       echo "print target branch: ${env.CHANGE_SOURCE}"
       }
     }
