@@ -14,9 +14,9 @@ pipeline {
             //Clone the repository and checkout the Pull Request branch
            checkout([
              $class: 'GitSCM',
-             branches: [
-               [name: "*/PR-${env.CHANGE_ID}"]
-             ],
+             // branches: [
+             //   [name: "*/PR-${env.CHANGE_ID}"]
+             // ],
              extensions: [
                [$class: 'CloneOption', depth: 1]
              ],
