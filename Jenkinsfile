@@ -33,6 +33,7 @@ pipeline {
     stage('PR') {
       steps {
         // sh 'cat Dockerfile'
+      sh 'cat README.md'
        echo "print target branch: ${env.CHANGE_SOURCE}"
       }
     }
