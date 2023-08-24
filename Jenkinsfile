@@ -15,7 +15,7 @@ pipeline {
            checkout([
              $class: 'GitSCM',
              branches: [
-               [name: "*/main"]
+               [name: "*/PR-${env.CHANGE_ID}"]
              ],
              extensions: [
                [$class: 'CloneOption', depth: 1]
