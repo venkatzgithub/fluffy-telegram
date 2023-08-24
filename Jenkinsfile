@@ -10,7 +10,6 @@ pipeline {
          script {
             //Extract the Pull Request branch name from the environment variables
            def pullRequestBranch = "main"
-
             //Clone the repository and checkout the Pull Request branch
            checkout([
              $class: 'GitSCM',
